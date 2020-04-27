@@ -75,7 +75,7 @@ except KeyboardInterrupt:
 # Old notification service using Pushover. More info regarding this topic in the documentation.
 
                
-def SendNotificationOld(): #Uses Pushbullet API to send high priority notification to phone. This notification will always make a sound at max volume.
+def SendNotificationOld(): #Uses Pushover API to send high priority notification to phone. This notification will always make a sound at max volume.
     conn = http.client.HTTPSConnection("api.pushover.net:443")
     conn.request("POST", "/1/messages.json",
       urllib.parse.urlencode({
